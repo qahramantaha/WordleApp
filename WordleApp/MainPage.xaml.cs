@@ -1,14 +1,30 @@
-﻿namespace WordleApp
+﻿namespace WordleApp;
+
+public partial class MainPage : ContentPage
 {
-    public partial class MainPage : ContentPage
+
+    public MainPage()
     {
-
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
 
+    private void GoToHow(object sender, EventArgs e)
+    {
 
 
     }
+
+    private void GoToSettings(object sender, EventArgs e)
+    {
+
+    }
+
+    private async void GoToStats(object sender, EventArgs e)
+    {
+
+    }
+}
+
+  
+

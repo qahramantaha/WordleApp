@@ -1,13 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WordleApp.MainPage"/>
+             x:Class="WordleApp.MainPage">
 
 <ScrollView>
     <VerticalStackLayout>
-
-
+        <!--Creating 3 image buttons for how to play, settings and stats -->
+        <HorizontalStackLayout HorizontalOptions="End" VerticalOptions="Start">
+            <ImageButton
+                Source="how.png"
+                x:Name="how_image"
+                Clicked="GoToHow"
+                HeightRequest="20"
+                WidthRequest="20"
+                Margin="0, 10, 0, 0"/>
+            <ImageButton
+                 Source="cog.png"
+                 x:Name="cog_image"
+                 Clicked="GoToSettings"
+                 HeightRequest="20"
+                 WidthRequest="20"
+                 Margin="0, 10, 0, 0"/>
+            <ImageButton
+                 Source="stats.png"
+                x:Name="stats_image"
+                Clicked="GoToStats"
+                HeightRequest="35"
+                WidthRequest="35"
+                Margin="5, 10, 15, 0"/>
+        </HorizontalStackLayout>
+        
+        <Label x:Name="GameTitle" Text="Wordle" FontSize="Large"
+               HorizontalOptions="Center" Margin="0, 5, 0, 5" FontAttributes="Bold"
+               />
     </VerticalStackLayout>
 </ScrollView>
+</ContentPage>
 
 
