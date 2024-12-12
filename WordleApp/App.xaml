@@ -9,6 +9,13 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- App Colours-->
+            <Color x:Key="WordleGreen">#00BF63</Color>
+            <Color x:Key="BackGroundColor">#FFFFFF</Color>
+            <Color x:Key="DisabledButtonColor">#d6d4d4</Color>
+            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

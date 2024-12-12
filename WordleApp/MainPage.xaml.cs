@@ -9,6 +9,19 @@ public partial class MainPage : ContentPage
     }
 
 
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void Enter_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void Backspace_Clicked(object sender, EventArgs e)
+    {
+    }
     private void GoToHow(object sender, EventArgs e)
     {
 
@@ -24,7 +37,12 @@ public partial class MainPage : ContentPage
     {
 
     }
+
+    private void qKey_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
 
-  
+
 
