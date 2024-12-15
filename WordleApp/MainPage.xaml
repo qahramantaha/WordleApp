@@ -71,13 +71,13 @@
 
                 <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*,*,*,*,*,*" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="1" ColumnSpacing="2">
                     <Button Grid.Row="0" Grid.Column="0" x:Name="enter_btn"  Text="Enter" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Enter_Clicked" IsEnabled="False"/>
-                    <Button Grid.Row="0" Grid.Column="1" x:Name="zkey"  Text="Z" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
-                    <Button Grid.Row="0" Grid.Column="2" x:Name="xkey"  Text="X" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
-                    <Button Grid.Row="0" Grid.Column="3" x:Name="ckey"  Text="C" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
-                    <Button Grid.Row="0" Grid.Column="4" x:Name="vkey"  Text="V" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
-                    <Button Grid.Row="0" Grid.Column="5" x:Name="bkey"  Text="B" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
-                    <Button Grid.Row="0" Grid.Column="6" x:Name="nkey"  Text="N" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
-                    <Button Grid.Row="0" Grid.Column="7" x:Name="mkey"  Text="M" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="zKey"  Text="Z" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="xKey"  Text="X" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="3" x:Name="cKey"  Text="C" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="4" x:Name="vKey"  Text="V" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="5" x:Name="bKey"  Text="B" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="6" x:Name="nKey"  Text="N" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="7" x:Name="mKey"  Text="M" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Button_Clicked"/>
                     <Button Grid.Row="0" Grid.Column="8" x:Name="back_btn"  Text="Backspace" TextColor="Black" BackgroundColor="{DynamicResource DisabledButtonColor}" Clicked="Backspace_Clicked"/>
                 </Grid>
             </VerticalStackLayout>
