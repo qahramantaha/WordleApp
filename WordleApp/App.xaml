@@ -17,6 +17,9 @@
             <Color x:Key="TextColor">#000000</Color>
 
 
+            <x:Boolean x:Key="IsHardMode">false</x:Boolean>
+            <x:Boolean x:Key="IsDarkMode">false</x:Boolean>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,4 +1,6 @@
 ﻿
+using CommunityToolkit.Maui.Views;
+
 namespace WordleApp;
 
 public partial class MainPage : ContentPage
@@ -13,7 +15,7 @@ public partial class MainPage : ContentPage
 
     private int letterCounter = 0, guessCounter = 0;
     private bool gridDrawn = false;
-
+    private string guess;
     public MainPage()
     {
         InitializeComponent();
@@ -101,20 +103,70 @@ public partial class MainPage : ContentPage
 
     private void Enter_Clicked(object sender, EventArgs e)
     {
+       
+        if (guessCounter < 6)
+        {
+            guess = "";
+            int rowIndex = guessCounter;
+            bool isRowFull = true;
 
+            foreach (var child in GuessGrid.Children)
+            {
+                if (GuessGrid.GetRow(child) == rowIndex && child is Label label)
+                {
+                    if (string.IsNullOrEmpty(label.Text))
+                    {
+                        isRowFull = false;
+                        break;
+                    }
+                    else
+                    {
+                        guess += label.Text;
+                    }
+                }
+            }
+            guess = guess.ToLower();
+
+        }
     }
 
+  //  Removes last label added to grid.
     private void Backspace_Clicked(object sender, EventArgs e)
     {
+       
+        if (letterCounter > 0)
+        {
+            var lastLabel = addedLabels[addedLabels.Count - 1];
+            GuessGrid.Children.Remove(lastLabel);
+            addedLabels.Remove(lastLabel);
+            letterCounter--;
+            if (letterCounter < 5)
+            {
+                enter_btn.IsEnabled = false;
+            }
+        }
+        if (letterCounter < 0)
+        {
+            letterCounter = GuessGrid.ColumnDefinitions.Count - 1;
+        }
     }
-    private void GoToHow(object sender, EventArgs e)
-    {
 
+    //Shows HowToPlay pop up page.
+    private async void GoToHow(object sender, EventArgs e)
+    {
+       
+        HowToPlay howToPlayPage = new HowToPlay();
+        await this.ShowPopupAsync(howToPlayPage);
 
     }
 
-    private void GoToSettings(object sender, EventArgs e)
+   // Shows Settings pop up page.
+    private async void GoToSettings(object sender, EventArgs e)
     {
+    
+
+        Settings settingsPage = new Settings();
+        await this.ShowPopupAsync(settingsPage);
 
     }
 
