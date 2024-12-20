@@ -8,8 +8,10 @@
     Title="WordleApp">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+           ContentTemplate="{DataTemplate local:WelcomePage}"
+    Route="WelcomePage" />
+    <ShellContent
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
 
 </Shell>

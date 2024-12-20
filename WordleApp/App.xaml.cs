@@ -6,7 +6,8 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            // Set the starting page to LoginPage
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }

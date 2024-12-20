@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+    x:Class="WordleApp.Stats">
+
+    <VerticalStackLayout
+        Padding="10"
+        WidthRequest="300"
+        HeightRequest="200"
+        BackgroundColor="White">
+
+        <Label
+            Text="Statistics"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            FontAttributes="Bold" />
+
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Wins:" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Label Text="{Binding NumWins}" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start" />
+
+            <Label Text="Games Played:" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Label Text="{Binding GamesPlayed}" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" />
+
+            <Label Text="Win %:" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Label Text="{Binding PercentWon}" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Start" />
+
+            <Label Text="Streak:" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Label Text="{Binding Streak}" Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Start" />
+        </Grid>
+    </VerticalStackLayout>
+</mct:Popup>
+
+
