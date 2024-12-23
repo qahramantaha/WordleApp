@@ -44,7 +44,7 @@
                 <Label x:Name="GameTitle" Text="Wordle" FontSize="Large"
                HorizontalOptions="Center" Margin="0, 5, 0, 5" FontAttributes="Bold"
                TextColor="{DynamicResource WordleGreen}"/>
-
+ 
                 <VerticalStackLayout x:Name="MainLayout"
                   Padding="10"
                   Spacing="15">

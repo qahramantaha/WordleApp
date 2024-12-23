@@ -12,7 +12,7 @@
             TextColor="Black"
             FontSize="Small"
             FontFamily="DroidSerifRegular"
-            Margin="0, 30, 0, 0"
+            Margin="0, 30, 0, 0" 
             FontAttributes="Bold"/>
 
         <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,15,0,0">

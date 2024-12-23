@@ -13,7 +13,7 @@ public partial class Settings : Popup
     {
 
         Application.Current.Resources["IsDarkMode"] = e.Value;
-        ToggleTheme(e.Value);
+        ToggleTheme(e.Value); 
 
 
     }

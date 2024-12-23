@@ -61,7 +61,7 @@ public partial class MainPage : ContentPage
 
 
         MainLayout.Children.Add(timerLabel);
-
+         
         //populate list of keys
         keys = new List<Button>
         {
