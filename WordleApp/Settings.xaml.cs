@@ -32,12 +32,12 @@ public partial class Settings : Popup
 
         if (isDarkMode)
         {
-            app.Resources["BackgroundColor"] = Colors.Black;
+            app.Resources["BackGroundColor"] = Colors.Black;
             app.Resources["TextColor"] = Colors.White;
         }
         else
         {
-            app.Resources["BackgroundColor"] = Colors.White;
+            app.Resources["BackGroundColor"] = Colors.White;
             app.Resources["TextColor"] = Colors.Black;
         }
     }

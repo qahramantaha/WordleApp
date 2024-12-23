@@ -16,10 +16,6 @@
             <Color x:Key="DisabledButtonColor">#d6d4d4</Color>
             <Color x:Key="TextColor">#000000</Color>
             <Color x:Key="EnabledButtonColor">#FFFFFF</Color>
-            <Color x:Key="BackgroundColorLight">White</Color>
-            <Color x:Key="TextColorLight">Black</Color>
-            <Color x:Key="BackgroundColorDark">Black</Color>
-            <Color x:Key="TextColorDark">White</Color>
 
 
             <x:Boolean x:Key="IsHardMode">false</x:Boolean>

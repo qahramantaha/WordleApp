@@ -1,7 +1,5 @@
 ﻿
 using CommunityToolkit.Maui.Views;
-using Microsoft.Maui.Controls;
-using System.Diagnostics;
 using WordleApp.ViewModels;
 
 namespace WordleApp;
@@ -154,7 +152,7 @@ public partial class MainPage : ContentPage
                         CornerRadius = 0,
                         HasShadow = false,
                         Padding = new Thickness(5),
-                        
+                        BorderColor = (Color)Application.Current.Resources["TextColor"]
                     };
 
                     GuessGrid.Add(styledFrame, row, col);
@@ -166,37 +164,7 @@ public partial class MainPage : ContentPage
         }
         gridDrawn = true;
     }
-    private void ApplyTheme()
-    {
-        bool isDarkMode = (bool)Application.Current.Resources["IsDarkMode"];
-
-        // Update ContentPage background
-        this.BackgroundColor = (Color)Application.Current.Resources["BackgroundColorDark"];
-
-        // Update Labels
-        PlayerNameLabel.TextColor = (Color)Application.Current.Resources["TextColor"];
-        timerLabel.TextColor = (Color)Application.Current.Resources["TextColor"];
-
-        // Update dynamically created Frames
-        foreach (var frame in addedFrames)
-        {
-            frame.BackgroundColor = (Color)Application.Current.Resources["BackgroundColorDark"];
-            frame.BorderColor = (Color)Application.Current.Resources["TextColor"];
-        }
-
-        // Update dynamically created Labels
-        foreach (var label in addedLabels)
-        {
-            label.TextColor = (Color)Application.Current.Resources["TextColor"];
-        }
-
-        // Update Buttons
-        foreach (var button in keys)
-        {
-            button.BackgroundColor = (Color)Application.Current.Resources["BackgroundColorDark"];
-            button.TextColor = (Color)Application.Current.Resources["TextColor"];
-        }
-    }
+   
 
 
     //  Retrieves list of words from view model, calls method to pick a word
@@ -235,7 +203,7 @@ public partial class MainPage : ContentPage
                 {
                     Text = text,
                     FontSize = 30,
-                    TextColor = Colors.Black,
+                    TextColor = (Color)Application.Current.Resources["TextColor"],
                     HorizontalTextAlignment = TextAlignment.Center,
                     VerticalTextAlignment = TextAlignment.Center
 
@@ -545,8 +513,6 @@ public partial class MainPage : ContentPage
     {
     
         //clear grid
-        ApplyTheme();
-
         ClearGrid();
 
         //redraw grid
