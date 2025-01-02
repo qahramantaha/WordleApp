@@ -11,9 +11,9 @@
             </ResourceDictionary.MergedDictionaries>
 
             <!-- App Colours-->
-            <Color x:Key="WordleGreen">#00BF63</Color>
+            <Color x:Key="Purple">#A020F0</Color>
             <Color x:Key="BackGroundColor">#FFFFFF</Color>
-            <Color x:Key="DisabledButtonColor">#d6d5ef</Color>
+            <Color x:Key="DisabledButtonColor">#808080</Color>
             <Color x:Key="TextColor">#000000</Color>
             <Color x:Key="EnabledButtonColor">#FFFFFF</Color>
  

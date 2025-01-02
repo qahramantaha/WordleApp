@@ -11,14 +11,14 @@
                    HorizontalOptions="Center"/>
             <Label x:Name="GameTitle" Text="Wordle"  FontSize="Large" 
                    HorizontalOptions="Center" Margin="20" FontAttributes="Bold"
-                   FontFamily="DroidSerifRegular" TextColor="{DynamicResource WordleGreen}"/>
+                   FontFamily="DroidSerifRegular" TextColor="{DynamicResource Purple}"/>
             <Label x:Name="GameTagline" Text="The 5-Letter Word Guessing Game."
                    FontFamily="DroidSerifRegular" HorizontalOptions="Center"
                    FontSize="Medium" TextColor="{DynamicResource TextColor}"/>
 
             <HorizontalStackLayout HorizontalOptions="Center" Margin="0,30,0,0">
                 <Button Text="How to Play" Margin="10,0,10,0" BackgroundColor="Grey" CornerRadius="15" TextColor="{DynamicResource TextColor}" Clicked="HowToPlay_Clicked"/>
-                <Button Text="Play" Margin="10,0,10,0" BackgroundColor="{DynamicResource WordleGreen}" CornerRadius="15" TextColor="{DynamicResource TextColor}" Clicked="PlayButton_Clicked"/>
+                <Button Text="Play" Margin="10,0,10,0" BackgroundColor="{DynamicResource Purple}" CornerRadius="15" TextColor="{DynamicResource TextColor}" Clicked="PlayButton_Clicked"/>
                 <Button Text="Settings" Margin="10,0,10,0" BackgroundColor="Grey" CornerRadius="15" TextColor="{DynamicResource TextColor}" Clicked="SettingsButton_Clicked"/>
             </HorizontalStackLayout>
 

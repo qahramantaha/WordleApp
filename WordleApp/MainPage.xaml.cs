@@ -348,17 +348,17 @@ public partial class MainPage : ContentPage
 
                 if (greenLetters.Contains(column))
                 {
-                    //turn square green
-                    currentFrame.BackgroundColor = Colors.Green;
-                    ChangeKeyGreen(guess[column]);
+                    //turn square purple
+                    currentFrame.BackgroundColor = Colors.Purple;
+                    ChangeKeyPurple(guess[column]);
                 }
                 else if (yellowLetters.Contains(column))
                 {
-                    //else turn square yellow
-                    currentFrame.BackgroundColor = Colors.Yellow;
+                    //else turn square orange
+                    currentFrame.BackgroundColor = Colors.Orange;
                     if (!correctLettersGuessed.Contains(guess[column]))
                     {
-                        ChangeKeyYellow(guess[column]);
+                        ChangeKeyOrange(guess[column]);
                     }
                 }
                 else
@@ -584,7 +584,7 @@ public partial class MainPage : ContentPage
 
     //Turns corresponding key green.
 
-    private void ChangeKeyGreen(char key)
+    private void ChangeKeyPurple(char key)
     {
         char lowerKey = char.ToLower(key);
 
@@ -592,14 +592,14 @@ public partial class MainPage : ContentPage
         {
             if (button.Text != null && char.ToLower(button.Text[0]) == lowerKey)
             {
-                button.BackgroundColor = (Color)Application.Current.Resources["WordleGreen"];
+                button.BackgroundColor = (Color)Application.Current.Resources["Purple"];
                 break; 
             }
         }
     }
 
     //Turns corresponding key yellow
-    private void ChangeKeyYellow(char key)
+    private void ChangeKeyOrange(char key)
     {
        
         char lowerKey = char.ToLower(key);
@@ -608,7 +608,7 @@ public partial class MainPage : ContentPage
         {
             if (button.Text != null && char.ToLower(button.Text[0]) == lowerKey)
             {
-                button.BackgroundColor = Colors.Yellow;
+                button.BackgroundColor = Colors.Orange;
                 break;
             }
         }

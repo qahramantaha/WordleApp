@@ -15,7 +15,7 @@
             FontSize="36"
             HorizontalOptions="Center"
             FontAttributes="Bold"
-            TextColor="{DynamicResource WordleGreen}"
+            TextColor="{DynamicResource Purple}"
             FontFamily="DroidSerifRegular" />
 
         <!-- Subtitle -->
@@ -41,7 +41,7 @@
         <Button
             Text="Start Playing"
             FontSize="Large"
-            BackgroundColor="{DynamicResource WordleGreen}"
+            BackgroundColor="{DynamicResource Purple}"
             TextColor="White"
             Clicked="LoginButton_Clicked"
             HorizontalOptions="FillAndExpand"
