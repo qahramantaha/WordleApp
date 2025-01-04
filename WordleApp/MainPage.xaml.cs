@@ -90,7 +90,7 @@ public partial class MainPage : ContentPage
 
     }
 
- //determines whether app is dark mode and assigns images accordingly
+ //determines whether app is dark mode and assigns images 
     public void PlayGame()
     {
         
@@ -111,16 +111,17 @@ public partial class MainPage : ContentPage
 
         if (isHardMode)
         {
-            timerLabel.IsVisible = true; // Show the timer in hard mode
+            timerLabel.IsVisible = true; 
             StartTimer();
         }
         else
         {
-            timerLabel.IsVisible = false; // Hide the timer in non-hard mode
+            timerLabel.IsVisible = false; 
         }
 
     }
 
+    // Handles the click event for the "Play Again" button and starts a new game
     private void playAgain_btn_Clicked(object sender, EventArgs e)
     {
         //plays game when clicked
@@ -227,6 +228,7 @@ public partial class MainPage : ContentPage
 
     }
 
+    //Handles the event when the "Enter" button is clicked, validates the word, and processes the guess
     private void Enter_Clicked(object sender, EventArgs e)
     {
        
@@ -446,6 +448,7 @@ public partial class MainPage : ContentPage
         await this.ShowPopupAsync(statsPage);
     }
 
+    // Saves the player's statistics to a file.
     public void SavePlayerStats()
     {
         // Determine the file path for the player's stats
@@ -468,11 +471,9 @@ public partial class MainPage : ContentPage
     }
 
 
-
-
+    //Loads the player's statistics from a file or initializes default stats if the file does not exist
     public void LoadPlayerStats()
     {
-        // Determine the file path for the player's stats
         _playerFilePath = Path.Combine(FileSystem.Current.AppDataDirectory, $"{_playerName}_stats.txt");
 
         if (File.Exists(_playerFilePath))
@@ -481,7 +482,6 @@ public partial class MainPage : ContentPage
             // If the file exists, load the player's stats
             using (StreamReader sr = new StreamReader(_playerFilePath))
             {
-                // Read the stats from the file
                 numWins = int.Parse(sr.ReadLine() ?? "0");
                 streak = int.Parse(sr.ReadLine() ?? "0");
                 gamesPlayed = int.Parse(sr.ReadLine() ?? "0");
@@ -492,7 +492,7 @@ public partial class MainPage : ContentPage
         }
         else
         {
-            // If the file does not exist, initialize the stats for a new player
+            // If the file does not exist, do the following
             ResetStats();
             SavePlayerStats();
         }
@@ -654,7 +654,7 @@ public partial class MainPage : ContentPage
     }
 
 
-
+    //Updates player statistics from the saved file
     public void UpdateStatistics()
     {
         if (File.Exists(SaveFilePath))
@@ -685,7 +685,7 @@ public partial class MainPage : ContentPage
 
         timerCancellationTokenSource?.Cancel(); // Cancel any existing timer.
         timerCancellationTokenSource = new CancellationTokenSource();
-        int totalSeconds = 900; // 15 minutes in seconds
+        int totalSeconds = 900; 
 
         while (totalSeconds > 0)
         {

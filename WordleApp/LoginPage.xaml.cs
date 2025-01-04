@@ -8,6 +8,7 @@ namespace WordleApp
             InitializeComponent();
         }
 
+        //// Validates the player's name, saves it in preferences, and navigates to the WelcomePage
         private async void LoginButton_Clicked(object sender, EventArgs e)
         {
             string playerName = PlayerNameEntry.Text?.Trim(); //Capture the player's name

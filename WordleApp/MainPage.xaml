@@ -97,6 +97,7 @@
                 </Grid>
             </VerticalStackLayout>
 
+        <!-- play again button-->
             <Button 
              x:Name="playAgain_btn"
              Clicked="playAgain_btn_Clicked"

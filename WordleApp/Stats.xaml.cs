@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace WordleApp;
 
+// Sets the BindingContext to enable data binding and loads the statistics
 public partial class Stats : Popup, INotifyPropertyChanged
 {
     private int _numWins;
@@ -75,7 +76,7 @@ public partial class Stats : Popup, INotifyPropertyChanged
 
     }
 
-    // Change the protection level to public to make it accessible
+    // Loads the player's statistics from the saved file or initializes default values if the file doesn't exist.
     public void LoadStatistics()
     {
         // Check if the stats file exists before reading
@@ -94,7 +95,6 @@ public partial class Stats : Popup, INotifyPropertyChanged
             }
             else
             {
-                // If the file is incomplete, reset stats and save them
                 ResetStats();
                 SaveDefaultStats();
             }
@@ -132,6 +132,7 @@ public partial class Stats : Popup, INotifyPropertyChanged
         PercentWon = 0;
     }
 
+    // Reloads statistics data - dynamically
     public void UpdateStatistics()
     {
         // Reload statistics if needed
@@ -140,6 +141,7 @@ public partial class Stats : Popup, INotifyPropertyChanged
 
     }
 
+    // Invokes the PropertyChanged event to notify the UI about property value changes
     public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

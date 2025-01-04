@@ -9,6 +9,7 @@ public partial class Settings : Popup
         InitializeComponent();
     }
 
+    // Updates the "IsDarkMode" resource and applies the selected theme
     private void darkMode_switch_Toggled(object sender, ToggledEventArgs e)
     {
 
@@ -18,6 +19,7 @@ public partial class Settings : Popup
 
     }
 
+    // Updates the "IsHardMode" resource in the application settings
     private void hardMode_switch_Toggled(object sender, ToggledEventArgs e)
     {
 
@@ -26,6 +28,7 @@ public partial class Settings : Popup
 
     }
 
+    // Applies the appropriate theme (dark or light) by updating app resource colors
     private void ToggleTheme(bool isDarkMode)
     {
         var app = (App)Application.Current;

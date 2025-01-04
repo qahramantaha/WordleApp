@@ -5,11 +5,11 @@ namespace WordleApp.ViewModels
 {
     public class WordsViewModel : INotifyPropertyChanged
     {
-        // Constants
+        // URL to fetch the words file
         private const string WordsFileUrl = "https://raw.githubusercontent.com/DonH-ITS/jsonfiles/main/words.txt";
         private string FilePath => Path.Combine(FileSystem.Current.AppDataDirectory, "words.txt");
 
-        // Properties
+        // Event to notify property changes
         public event PropertyChangedEventHandler PropertyChanged;
         private List<string> _listOfWords = new();
         public List<string> Words => _listOfWords;
@@ -28,9 +28,10 @@ namespace WordleApp.ViewModels
                 }
             }
         }
+        // Indicates whether the ViewModel is not busy
         public bool IsNotBusy => !IsBusy;
 
-        // Dependencies
+        // HTTP client used to fetch the words
         private readonly HttpClient _httpClient;
 
         public WordsViewModel(HttpClient httpClient = null)
@@ -80,6 +81,7 @@ namespace WordleApp.ViewModels
             IsBusy = false;
         }
 
+        //Notify the UI of property changes
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

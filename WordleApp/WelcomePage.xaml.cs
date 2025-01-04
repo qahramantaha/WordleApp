@@ -4,8 +4,8 @@ namespace WordleApp;
 
 public partial class WelcomePage : ContentPage
 {
-    private string _playerName;
-    private string _playerFilePath;
+    private string _playerName; // Stores the player's name
+    private string _playerFilePath; //Path to the player's stats file
 
     public WelcomePage(string playerName)
     {
@@ -17,13 +17,13 @@ public partial class WelcomePage : ContentPage
 
     }
 
+    // Loads the player's profile from a file or initializes a new one if it doesn't exist
     private void LoadPlayerProfile()
     {
         if (File.Exists(_playerFilePath))
         {
             // Load stats from the file
             var lines = File.ReadAllLines(_playerFilePath);
-            // Example: Stats are stored as lines (Wins, Streak, Games Played)
             int numWins = int.Parse(lines[0]);
             int streak = int.Parse(lines[1]);
             int gamesPlayed = int.Parse(lines[2]);
@@ -38,6 +38,8 @@ public partial class WelcomePage : ContentPage
             GameTagline.Text = "Welcome to your first game of Wordle!";
         }
     }
+
+    // Displays a welcome message using the player's name
     private void DisplayWelcomeMessage()
     {
         GameTitle.Text = $"Welcome, {_playerName}!";

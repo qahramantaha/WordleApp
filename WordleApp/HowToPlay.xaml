@@ -5,6 +5,7 @@
             x:Class="WordleApp.HowToPlay">
 
     <VerticalStackLayout Margin="10" WidthRequest="400" HeightRequest="500" VerticalOptions="Center" HorizontalOptions="Center">
+        <!-- top image -->
         <Image 
              Source="wordle_logo2.png" 
              HorizontalOptions="Center" 
@@ -52,6 +53,7 @@
             FontFamily="DroidSerifRegular"
             FontAttributes="Bold"
             Margin="15, 20, 0, 0" />
+       <!-- image for example-->
         <Image 
              Source="wordle.example.png" 
              HorizontalOptions="Start" 
@@ -119,7 +121,7 @@
                 Margin="0, 0, 0, 5"/>
         </HorizontalStackLayout>
 
-        <!-- Add Hard Mode Section -->
+        <!--Hard Mode Section -->
         <Label 
             Text="Hard Mode"
             VerticalOptions="Start" 

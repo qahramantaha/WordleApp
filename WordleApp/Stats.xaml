@@ -5,6 +5,7 @@
     xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
     x:Class="WordleApp.Stats">
 
+    <!-- layout for the popup -->
     <VerticalStackLayout
         Padding="10"
         WidthRequest="300"
@@ -17,6 +18,7 @@
             HorizontalOptions="Center"
             FontAttributes="Bold" />
 
+        <!-- Grid layout to display statistics -->
         <Grid Padding="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -29,15 +31,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
+            <!-- Wins Label -->
             <Label Text="Wins:" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="End" />
             <Label Text="{Binding NumWins}" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start" />
 
+            <!-- Games Played Label -->
             <Label Text="Games Played:" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="End" />
             <Label Text="{Binding GamesPlayed}" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" />
 
+            <!-- Win Percentage Label -->
             <Label Text="Win %:" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="End" />
             <Label Text="{Binding PercentWon}" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Start" />
 
+            <!-- Streak Label -->
             <Label Text="Streak:" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="End" />
             <Label Text="{Binding Streak}" Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Start" />
         </Grid>
