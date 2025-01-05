@@ -81,6 +81,22 @@ namespace WordleApp.ViewModels
             IsBusy = false;
         }
 
+        // Ensure the word list is initialized properly
+        public async Task EnsureWordsInitializedAsync()
+        {
+            if (_listOfWords.Count == 0)
+            {
+                if (File.Exists(FilePath)) 
+                {
+                    LoadWordsFromFile();
+                }
+                else 
+                {
+                    await FetchWordsFromRemote();
+                }
+            }
+        }
+
         //Notify the UI of property changes
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

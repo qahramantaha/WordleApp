@@ -47,7 +47,7 @@ public partial class MainPage : ContentPage
         _playerName = playerName;
         LoadPlayerStats();
         PlayerNameLabel.Text = $"Welcome, {_playerName}!";
-
+        InitializeGameAsync();
 
         timerLabel = new Label
         {
@@ -715,6 +715,22 @@ public partial class MainPage : ContentPage
                 Lose();
             });
         }
+    }
+
+    // Async method to initialize the game
+    private async void InitializeGameAsync()
+    {
+        await _wordsViewModel.EnsureWordsInitializedAsync();
+
+        if (_wordsViewModel.Words.Count == 0)
+        {
+            await DisplayAlert("Error", "Failed to load word list. Please check your internet connection.", "OK");
+            return;
+        }
+
+        LoadPlayerStats();
+        PlayerNameLabel.Text = $"Welcome, {_playerName}!";
+        PlayGame();
     }
 
     //Shows HowToPlay pop up page.
