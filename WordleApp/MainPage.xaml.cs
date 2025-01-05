@@ -47,7 +47,6 @@ public partial class MainPage : ContentPage
         _playerName = playerName;
         LoadPlayerStats();
         PlayerNameLabel.Text = $"Welcome, {_playerName}!";
-        InitializeGameAsync();
 
         timerLabel = new Label
         {
@@ -69,6 +68,8 @@ public partial class MainPage : ContentPage
             kKey, lKey, mKey, nKey, oKey, pKey, qKey, rKey, sKey, tKey,
             uKey, vKey, wKey, xKey, yKey, zKey, back_btn
         };
+
+        InitializeGameAsync();
 
         if ((bool)Application.Current.Resources["IsDarkMode"])
         {
